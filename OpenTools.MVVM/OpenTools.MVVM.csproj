@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Title>MMV library for MAUI, WPF or Xamarin apps</Title>
   </PropertyGroup>
 
 </Project>
