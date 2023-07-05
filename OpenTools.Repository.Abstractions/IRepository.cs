@@ -6,7 +6,7 @@ public interface IRepository<TParam, TId>
         TId id,
         CancellationToken cancellationToken = default);
 
-    Task<TParam> GetWhere(
+    Task<List<TParam>> GetWhere(
         SpecificationBase<TParam> specification, 
         CancellationToken cancellationToken = default);
 
