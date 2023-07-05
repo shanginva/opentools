@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools", "OpenTools\OpenTools.csproj", "{4533D835-477A-469D-A996-CEC27681D339}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.Shared", "OpenTools\OpenTools.Shared.csproj", "{4533D835-477A-469D-A996-CEC27681D339}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.Repository.Abstractions", "OpenTools.Repository.Abstractions\OpenTools.Repository.Abstractions.csproj", "{28512555-4518-4427-A989-E03537360C82}"
 EndProject
@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.Mediator", "OpenT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.Mediator.App", "OpenTools.Mediator.App\OpenTools.Mediator.App.csproj", "{A9AFFAE2-31D7-46F7-870F-6A3D8F60BC8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTools.MVVM", "OpenTools.MVVM\OpenTools.MVVM.csproj", "{0D11B01F-7B3C-4FDC-9741-27BBA946A834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.MVVM", "OpenTools.MVVM\OpenTools.MVVM.csproj", "{0D11B01F-7B3C-4FDC-9741-27BBA946A834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTools.HomeAssistant", "OpenTools.HomeAssistant\OpenTools.HomeAssistant.csproj", "{81E4B298-FF17-4582-9D18-5549FB322CFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTools.HomeAssistant.ClientApp", "OpenTools.HomeAssistant.App\OpenTools.HomeAssistant.ClientApp.csproj", "{C4169775-6A29-462F-A79D-D87FDD0AADF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{0D11B01F-7B3C-4FDC-9741-27BBA946A834}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D11B01F-7B3C-4FDC-9741-27BBA946A834}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D11B01F-7B3C-4FDC-9741-27BBA946A834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E4B298-FF17-4582-9D18-5549FB322CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E4B298-FF17-4582-9D18-5549FB322CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E4B298-FF17-4582-9D18-5549FB322CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E4B298-FF17-4582-9D18-5549FB322CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4169775-6A29-462F-A79D-D87FDD0AADF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4169775-6A29-462F-A79D-D87FDD0AADF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4169775-6A29-462F-A79D-D87FDD0AADF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4169775-6A29-462F-A79D-D87FDD0AADF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
