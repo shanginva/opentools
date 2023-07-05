@@ -1,14 +1,18 @@
 ﻿namespace OpenTools.Repository.Abstrations;
 
-internal interface IRepository<TParam, TId>
+public interface IRepository<TParam, TId>
 {
-    Task<TParam> Get(TId id);
+    Task<TParam?> Get(
+        TId id,
+        CancellationToken cancellationToken = default);
 
-    Task<TParam> GetWhere(SpecificationBase<TParam> specification);
+    Task<TParam> GetWhere(
+        SpecificationBase<TParam> specification, 
+        CancellationToken cancellationToken = default);
 
     void Create(TParam param);
 
     void Update(TParam param);
 
-    void Delete(TId id);
+    void Delete(TParam param);
 }
