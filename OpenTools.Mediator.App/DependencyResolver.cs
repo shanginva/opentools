@@ -1,4 +1,4 @@
-﻿using OpenTools.Mediator.Abstrations;
+﻿using OpenTools.Mediator.Abstractions;
 using SimpleInjector;
 using System.Reflection;
 
@@ -31,10 +31,10 @@ internal class DependencyResolver : IDependencyResolver
     {
         var queryInterface = typeof(IQuery<>);
         var queryTypes = assembly.GetTypes().Where(t => t.IsAssignableFrom(queryInterface));
-        var queryHandlerAbstrations = queryTypes
+        var queryHandlerAbstractions = queryTypes
             .Select(queryType => typeof(IQueryHandler<,>)
                 .MakeGenericType(queryType, queryType.GetGenericArguments().First()));
-        foreach (var queryHandlerInterface in queryHandlerAbstrations)
+        foreach (var queryHandlerInterface in queryHandlerAbstractions)
         {
             var queryHandlers = assembly.GetTypes().Where(t => t.IsAssignableFrom(queryHandlerInterface));
 

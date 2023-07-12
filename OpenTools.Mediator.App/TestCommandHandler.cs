@@ -1,4 +1,4 @@
-﻿using OpenTools.Mediator.Abstrations;
+﻿using OpenTools.Mediator.Abstractions;
 
 namespace OpenTools.Mediator.App;
 

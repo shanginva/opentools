@@ -1,4 +1,4 @@
-﻿namespace OpenTools.Repository.Abstrations;
+﻿namespace OpenTools.Repository.Abstractions;
 
 public interface IRepository<TParam, TId>
 {
@@ -8,6 +8,11 @@ public interface IRepository<TParam, TId>
 
     Task<List<TParam>> GetWhere(
         SpecificationBase<TParam> specification, 
+        CancellationToken cancellationToken = default);
+
+    Task<PagedResult<TParam>> GetPagedWhere( 
+        SpecificationBase<TParam> specification, 
+        PageInfo pageInfo,
         CancellationToken cancellationToken = default);
 
     void Create(TParam param);

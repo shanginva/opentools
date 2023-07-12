@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.HomeAssistant", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.HomeAssistant.ClientApp", "OpenTools.HomeAssistant.App\OpenTools.HomeAssistant.ClientApp.csproj", "{C4169775-6A29-462F-A79D-D87FDD0AADF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTools.Repository.EntityFramework", "OpenTools.Repository.EntityFramework\OpenTools.Repository.EntityFramework.csproj", "{87810EB0-5DB6-4306-9A20-0E278C5747DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTools.Repository.EntityFramework", "OpenTools.Repository.EntityFramework\OpenTools.Repository.EntityFramework.csproj", "{87810EB0-5DB6-4306-9A20-0E278C5747DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTools.Repository.EntityFramework.Tests", "OpenTools.Repository.EntityFramework.Tests\OpenTools.Repository.EntityFramework.Tests.csproj", "{932D8B0D-B3F0-4A46-8939-C0C09CE60DD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{87810EB0-5DB6-4306-9A20-0E278C5747DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87810EB0-5DB6-4306-9A20-0E278C5747DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87810EB0-5DB6-4306-9A20-0E278C5747DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932D8B0D-B3F0-4A46-8939-C0C09CE60DD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932D8B0D-B3F0-4A46-8939-C0C09CE60DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932D8B0D-B3F0-4A46-8939-C0C09CE60DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932D8B0D-B3F0-4A46-8939-C0C09CE60DD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

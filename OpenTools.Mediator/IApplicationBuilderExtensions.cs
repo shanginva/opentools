@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using OpenTools.Mediator.Abstrations;
+using OpenTools.Mediator.Abstractions;
 
 namespace OpenTools.Mediator;
 

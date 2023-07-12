@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace OpenTools.Mediator.Abstrations;
+namespace OpenTools.Mediator.Abstractions;
 
 public interface IDependencyResolver
 {

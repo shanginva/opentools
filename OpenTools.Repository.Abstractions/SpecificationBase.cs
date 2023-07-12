@@ -1,6 +1,13 @@
 ﻿using System.Linq.Expressions;
 
-namespace OpenTools.Repository.Abstrations;
+namespace OpenTools.Repository.Abstractions;
+
+public class All<TParam> : SpecificationBase<TParam>
+{
+    public All() : base(_ => true)
+    {
+    }
+}
 
 public abstract class SpecificationBase<TParam>
 {
@@ -21,6 +28,9 @@ public abstract class SpecificationBase<TParam>
 
     public SpecificationBase<TParam> Or(SpecificationBase<TParam> specification)
         => new OrSpecification<TParam>(this, specification);
+
+    public SpecificationBase<TParam> All()
+    => new All<TParam>();
 
     private class AndSpecification<T> : SpecificationBase<T>
     {

@@ -1,6 +1,6 @@
 ﻿using OpenTools.Mediator;
 using OpenTools.Mediator.App;
-using OpenTools.Mediator.Abstrations;
+using OpenTools.Mediator.Abstractions;
 using SimpleInjector;
 
 Container container = new();

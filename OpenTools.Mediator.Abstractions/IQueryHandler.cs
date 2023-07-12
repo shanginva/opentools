@@ -1,4 +1,4 @@
-﻿namespace OpenTools.Mediator.Abstrations;
+﻿namespace OpenTools.Mediator.Abstractions;
 
 public interface IQueryHandler<in TQuery, TResult>
     where TQuery : IQuery<TResult>

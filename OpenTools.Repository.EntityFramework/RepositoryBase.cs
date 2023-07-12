@@ -1,17 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OpenTools.Repository.Abstractions;
-using OpenTools.Repository.Abstrations;
 
 namespace OpenTools.Repository.EntityFramework;
 
-public abstract class RepositoryBase<TParam, TId>
+public abstract class RepositoryBase<TDataContext, TParam, TId>
     : IRepository<TParam, TId> 
         where TParam : EntityBase<TId>
         where TId: IEquatable<TId>
+        where TDataContext : DbContext
 {
-    private readonly DbContext context;
+    protected readonly TDataContext context;
 
-    protected RepositoryBase(DbContext context)
+    protected RepositoryBase(TDataContext context)
         => this.context = context;
 
     public virtual void Create(TParam param)
@@ -35,6 +35,21 @@ public abstract class RepositoryBase<TParam, TId>
         => Query()
             .Where(specification.Expression)
             .ToListAsync(cancellationToken);
+
+    public async Task<PagedResult<TParam>> GetPagedWhere(SpecificationBase<TParam> specification, PageInfo pageInfo, CancellationToken cancellationToken = default)
+    {
+        int skip = (pageInfo.Page - 1) * pageInfo.PageSize;
+        IQueryable<TParam> query = Query().Where(specification.Expression);
+
+        List<TParam> items = await query
+            .Skip(skip)
+            .Take(pageInfo.PageSize)
+            .ToListAsync();
+        return new PagedResult<TParam>(
+            Page: pageInfo.Page, 
+            PagesCount: (await query.CountAsync() + pageInfo.PageSize - 1) / pageInfo.PageSize, 
+            Items: items);
+    }
 
     protected abstract IQueryable<TParam> Query();
 
